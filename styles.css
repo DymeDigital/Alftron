@@ -436,7 +436,7 @@ button, input, textarea {
   padding: 96px 24px;
   background:
     linear-gradient(135deg, rgba(3, 3, 5, 0.14), rgba(8, 6, 6, 0.1)),
-    url('images/fire-extinguish.png') center/cover no-repeat;
+    url('images/fire-extinguish.webp') center/cover no-repeat;
   background-attachment: fixed;
 }
 
