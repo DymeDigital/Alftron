@@ -45,69 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     revealItems.forEach(el => observer.observe(el));
   }
-
-  const carousel = document.querySelector('[data-carousel]');
-  if (!carousel) return;
-
-  const imageEl = carousel.querySelector('.service-carousel__image');
-  const dotsEl = carousel.querySelector('.service-carousel__dots');
-  const prevBtn = carousel.querySelector('.service-carousel__button--prev');
-  const nextBtn = carousel.querySelector('.service-carousel__button--next');
-
-  const slides = [
-    { src: 'images/fire-alarm-systems-hero.jpg', alt: 'Fire alarm systems installation' },
-    { src: 'images/valve-manifold.jpg', alt: 'Valve manifold and suppression equipment' },
-    { src: 'images/gas-suppression-cylinders.jpg', alt: 'Gas suppression cylinders' },
-    { src: 'images/alarm-panel-wall.jpg', alt: 'Alarm panel wall installation' },
-    { src: 'images/pump-room.jpg', alt: 'Monitoring and pump room infrastructure' },
-    { src: 'images/ceiling-containment.jpg', alt: 'Ceiling containment and fire safety work' },
-    { src: 'images/fire-extingush.avif', alt: 'Fire protection equipment' },
-    { src: 'images/fire2.webp', alt: 'Fire protection inspection' }
-  ];
-
-  let activeIndex = 0;
-
-  const renderDots = () => {
-    dotsEl.innerHTML = slides.map((_, index) => `
-      <button
-        class="service-carousel__dot${index === 0 ? ' is-active' : ''}"
-        type="button"
-        data-index="${index}"
-        aria-label="Go to image ${index + 1}"
-      ></button>
-    `).join('');
-  };
-
-  const updateCarousel = () => {
-    const slide = slides[activeIndex];
-    imageEl.src = slide.src;
-    imageEl.alt = slide.alt;
-
-    dotsEl.querySelectorAll('.service-carousel__dot').forEach((dot, index) => {
-      dot.classList.toggle('is-active', index === activeIndex);
-    });
-  };
-
-  renderDots();
-  updateCarousel();
-
-  prevBtn?.addEventListener('click', () => {
-    activeIndex = (activeIndex - 1 + slides.length) % slides.length;
-    updateCarousel();
-  });
-
-  nextBtn?.addEventListener('click', () => {
-    activeIndex = (activeIndex + 1) % slides.length;
-    updateCarousel();
-  });
-
-  dotsEl?.addEventListener('click', event => {
-    const button = event.target.closest('button[data-index]');
-    if (!button) return;
-
-    activeIndex = Number(button.dataset.index);
-    updateCarousel();
-  });
 });
 
 /* ---------------- Services section ---------------- */
