@@ -217,7 +217,7 @@ button, input, textarea {
   justify-items: start;
   min-height: 100vh;
   min-height: 100svh;
-  background: url('images/fire-alarm-systems-hero.jpg') center center/cover no-repeat;
+  background: url('images/fire-alarm-systems-hero.webp') center center/cover no-repeat;
   background-attachment: fixed;
   position: relative;
   overflow: hidden;
@@ -1532,7 +1532,7 @@ button, input, textarea {
     padding: 7rem 22px 3.5rem;
     justify-items: center;
     text-align: center;
-    background-image: url('images/mobilehero.png');
+    background-image: url('images/mobilehero.webp');
     background-position: center center;
     background-size: cover;
     background-attachment: scroll;
