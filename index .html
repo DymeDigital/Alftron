@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alftron Fire and Security</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="navbar" id="pageNavbar">
+    <a class="navbar__brand" href="#">
+      <img src="images/logo.png" alt="Alftron Fire and Security logo" class="navbar__logo" />
+      <span class="navbar__brandText">Alftron Fire & Security</span>
+    </a>
+    <button class="navbar__toggle" aria-label="Open menu" id="menuToggle" aria-expanded="false">Menu</button>
+    <ul class="navbar__links" id="navMenu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li class="navbar__links-cta"><a href="#contact">Request Service</a></li>
+    </ul>
+    <a class="navbar__cta" href="#contact">Request Service</a>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero__content">
+        <p class="eyebrow hero__eyebrow fade-up fade-up-delay-1">YOUR SAFETY IS OUR PRIORITY</p>
+        <h1 class="fade-up fade-up-delay-2">Fire protection and security systems.</h1>
+        <p class="hero__copy fade-up fade-up-delay-3">25+ years protecting businesses, property and people with tailored fire detection, suppression and security solutions.</p>
+        <div class="hero__actions fade-up fade-up-delay-4">
+          <a class="button button--primary" href="#contact">Request a Quote</a>
+          <a class="button button--ghost" href="#services">Explore Services</a>
+        </div>
+      </div>
+    </section>
+<section class="section section--about" id="about">
+      <div class="about-grid">
+        <div>
+        <div class="about-image fade-up fade-up-delay-2">
+          <img src="images/fire2.webp" alt="Fire protection inspection" />
+        </div>
+        <button type="button" class="button button--ghost about-action fade-up fade-up-delay-4" id="aboutToggle" aria-expanded="false" aria-controls="aboutMore">More about us →</button>
+      </div>
+        <div class="about-content">
+          <span class="eyebrow fade-up fade-up-delay-1">About Alftron</span>
+          <h2 class="fade-up fade-up-delay-2">Delivering premium fire and security protection with clarity and confidence.</h2>
+          <p class="fade-up fade-up-delay-3">Alftron brings specialised experience in fire alarm systems, suppression solutions, and fully integrated security systems for businesses and homes. We make safety easier with clear guidance, trusted installation, and ongoing support.</p>
+          <ul class="about-list fade-up fade-up-delay-4">
+            <li>Design and system planning</li>
+            <li>Professional installation and commissioning</li>
+            <li>Inspection, testing, and certification</li>
+            <li>Maintenance and monitoring support</li>
+          </ul>
+
+          <div class="about-more" id="aboutMore" hidden>
+            <div class="about-more__inner">
+              <p>For more than 25 years, Alftron has helped businesses and homeowners across South Africa protect what matters most. What began as a specialised fire protection company has grown into a full-service fire and security partner, trusted on everything from single-site installations to complex industrial and commercial projects.</p>
+              <p>Our approach is built on doing the job properly the first time. Every system we design is tailored to the specific risks of your site, installed by certified technicians, and backed by the inspection, testing and maintenance needed to keep it compliant and dependable for years. We work to SANS standards and insurance requirements, so you can be confident your protection will perform when it counts.</p>
+
+              <div class="about-more__grid">
+                <div class="about-stat">
+                  <span class="about-stat__num">25+</span>
+                  <span class="about-stat__label">Years in fire protection</span>
+                </div>
+                <div class="about-stat">
+                  <span class="about-stat__num">24/7</span>
+                  <span class="about-stat__label">Emergency call-out support</span>
+                </div>
+                <div class="about-stat">
+                  <span class="about-stat__num">SANS</span>
+                  <span class="about-stat__label">Compliant systems &amp; audits</span>
+                </div>
+                <div class="about-stat">
+                  <span class="about-stat__num">End&#8209;to&#8209;end</span>
+                  <span class="about-stat__label">Design, install &amp; maintain</span>
+                </div>
+              </div>
+
+              <h3 class="about-more__subhead">Why clients choose Alftron</h3>
+              <ul class="about-list">
+                <li>Specialised expertise across fire detection, suppression, and integrated security</li>
+                <li>Solutions engineered for compliance, reliability, and long-term protection</li>
+                <li>Certified installation and honest, clear guidance at every step</li>
+                <li>Rapid response and ongoing support that keeps your systems ready</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--services" id="services">
+      <div class="services-inner">
+        <div class="services-head">
+          <span class="eyebrow fade-up fade-up-delay-1">Services</span>
+          <h2 class="fade-up fade-up-delay-2">Complete fire protection and security, end to end.</h2>
+          <p class="fade-up fade-up-delay-3">From detection and suppression to hydrants, passive protection, compliance and security — pick a category to see what each service includes and where it applies.</p>
+        </div>
+
+        <div class="services-filter fade-up fade-up-delay-3" role="tablist" aria-label="Filter services by category" data-service-filter></div>
+
+        <div class="services-count" data-service-count aria-live="polite"></div>
+
+        <div class="services-grid" data-service-grid></div>
+
+        <div class="services-cta fade-up">
+          <p>Not sure what your site needs? We'll assess it and recommend the right systems.</p>
+          <a class="button button--primary" href="#contact">Request a Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="section__heading">
+        <span class="eyebrow fade-up fade-up-delay-1">How we work</span>
+        <h2 class="fade-up fade-up-delay-2">Our process keeps every system reliable and dependable.</h2>
+      </div>
+      <div class="process-grid">
+        <div class="process-step fade-up fade-up-delay-2">
+          <span>01</span>
+          <h4>Site Evaluation</h4>
+          <p>We assess the premise, identify hazards and define the protection scope.</p>
+        </div>
+        <div class="process-step fade-up fade-up-delay-3">
+          <span>02</span>
+          <h4>System Design</h4>
+          <p>Custom layouts are created for fire detection, suppression and security coverage.</p>
+        </div>
+        <div class="process-step fade-up fade-up-delay-4">
+          <span>03</span>
+          <h4>Professional Installation</h4>
+          <p>Certified technicians install every system with care and code compliance.</p>
+        </div>
+        <div class="process-step fade-up fade-up-delay-1">
+          <span>04</span>
+          <h4>Support & Maintenance</h4>
+          <p>Inspection, service and rapid response keep your systems ready every day.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--gallery" id="projects">
+      <div class="section__heading">
+        <span class="eyebrow fade-up fade-up-delay-1">Projects</span>
+        <h2 class="fade-up fade-up-delay-2">Installed solutions for fire protection and security.</h2>
+        <span class="gallery-swipe-hint">Swipe to explore →</span>
+      </div>
+      <div class="gallery-grid">
+        <article class="gallery-card fade-up fade-up-delay-2">
+          <img src="images/gas-suppression-cylinders.jpg" alt="Gas suppression cylinders" />
+          <div class="gallery-card__text">Suppression system installation</div>
+        </article>
+        <article class="gallery-card fade-up fade-up-delay-3">
+          <img src="images/alarm-panel-wall.jpg" alt="Fire alarm control panel" />
+          <div class="gallery-card__text">Alarm and control panel setup</div>
+        </article>
+        <article class="gallery-card fade-up fade-up-delay-4">
+          <img src="images/pump-room.jpg" alt="Mechanical and monitoring infrastructure" />
+          <div class="gallery-card__text">Security and monitoring hardware</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--clients" id="clients">
+      <div class="section__heading">
+        <span class="eyebrow fade-up fade-up-delay-1">Trusted by</span>
+        <h2 class="fade-up fade-up-delay-2">Companies who rely on Alftron for fire and security.</h2>
+      </div>
+
+      <div class="marquee-rows fade-up fade-up-delay-3" aria-label="Companies we have worked with">
+
+        <!-- Row 1 -> scrolls left -->
+        <div class="marquee marquee--left">
+          <div class="marquee__track">
+            <div class="marquee__group">
+              <div class="client-logo"><img src="images/logoabsa.jpeg" alt="Absa" /></div>
+              <div class="client-logo"><img src="images/logodunlop.jpeg" alt="Dunlop" /></div>
+              <div class="client-logo"><img src="images/logoengen.jpeg" alt="Engen" /></div>
+              <div class="client-logo"><img src="images/logoeskom.jpeg" alt="Eskom" /></div>
+              <div class="client-logo"><img src="images/logoillovo.jpeg" alt="Illovo" /></div>
+              <div class="client-logo"><img src="images/logokfc.png" alt="KFC" /></div>
+              <div class="client-logo"><img src="images/logomrp.jpeg" alt="Mr Price" /></div>
+              <div class="client-logo"><img src="images/logonampak.jpeg" alt="Nampak" /></div>
+              <div class="client-logo"><img src="images/logoned.jpeg" alt="Nedbank" /></div>
+            </div>
+            <div class="marquee__group" aria-hidden="true">
+              <div class="client-logo"><img src="images/logoabsa.jpeg" alt="" /></div>
+              <div class="client-logo"><img src="images/logodunlop.jpeg" alt="" /></div>
+              <div class="client-logo"><img src="images/logoengen.jpeg" alt="" /></div>
+              <div class="client-logo"><img src="images/logoeskom.jpeg" alt="" /></div>
+              <div class="client-logo"><img src="images/logoillovo.jpeg" alt="" /></div>
+              <div class="client-logo"><img src="images/logokfc.png" alt="" /></div>
+              <div class="client-logo"><img src="images/logomrp.jpeg" alt="" /></div>
+              <div class="client-logo"><img src="images/logonampak.jpeg" alt="" /></div>
+              <div class="client-logo"><img src="images/logoned.jpeg" alt="" /></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2 -> scrolls right -->
+        <div class="marquee marquee--right">
+          <div class="marquee__track">
+            <div class="marquee__group">
+              <div class="client-logo"><img src="images/LogoNestle-.jpg" alt="Nestlé" /></div>
+              <div class="client-logo"><img src="images/logooyster.png" alt="Oyster" /></div>
+              <div class="client-logo"><img src="images/logopepsi.jpeg" alt="Pepsi" /></div>
+              <div class="client-logo"><img src="images/logopnp.jpeg" alt="Pick n Pay" /></div>
+              <div class="client-logo"><img src="images/logoprotea.webp" alt="Protea" /></div>
+              <div class="client-logo"><img src="images/logosanral.jpeg" alt="SANRAL" /></div>
+              <div class="client-logo"><img src="images/logosars.png" alt="SARS" /></div>
+              <div class="client-logo"><img src="images/logoshoprite.jpeg" alt="Shoprite" /></div>
+            </div>
+            <div class="marquee__group" aria-hidden="true">
+              <div class="client-logo"><img src="images/LogoNestle-.jpg" alt="" /></div>
+              <div class="client-logo"><img src="images/logooyster.png" alt="" /></div>
+              <div class="client-logo"><img src="images/logopepsi.jpeg" alt="" /></div>
+              <div class="client-logo"><img src="images/logopnp.jpeg" alt="" /></div>
+              <div class="client-logo"><img src="images/logoprotea.webp" alt="" /></div>
+              <div class="client-logo"><img src="images/logosanral.jpeg" alt="" /></div>
+              <div class="client-logo"><img src="images/logosars.png" alt="" /></div>
+              <div class="client-logo"><img src="images/logoshoprite.jpeg" alt="" /></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3 -> scrolls left -->
+        <div class="marquee marquee--left marquee--slow">
+          <div class="marquee__track">
+            <div class="marquee__group">
+              <div class="client-logo"><img src="images/logoss.jpeg" alt="SS" /></div>
+              <div class="client-logo"><img src="images/logotiger.jpeg" alt="Tiger Brands" /></div>
+              <div class="client-logo"><img src="images/logotoyota.png" alt="Toyota" /></div>
+              <div class="client-logo"><img src="images/logotrans.webp" alt="Trans" /></div>
+              <div class="client-logo"><img src="images/logotransnet.jpeg" alt="Transnet" /></div>
+              <div class="client-logo"><img src="images/logoukzn.jpeg" alt="UKZN" /></div>
+              <div class="client-logo"><img src="images/logouniev.png" alt="University" /></div>
+              <div class="client-logo"><img src="images/logowool.jpeg" alt="Woolworths" /></div>
+              <div class="client-logo"><img src="images/logozimbal.png" alt="Zimbal" /></div>
+            </div>
+            <div class="marquee__group" aria-hidden="true">
+              <div class="client-logo"><img src="images/logoss.jpeg" alt="" /></div>
+              <div class="client-logo"><img src="images/logotiger.jpeg" alt="" /></div>
+              <div class="client-logo"><img src="images/logotoyota.png" alt="" /></div>
+              <div class="client-logo"><img src="images/logotrans.webp" alt="" /></div>
+              <div class="client-logo"><img src="images/logotransnet.jpeg" alt="" /></div>
+              <div class="client-logo"><img src="images/logoukzn.jpeg" alt="" /></div>
+              <div class="client-logo"><img src="images/logouniev.png" alt="" /></div>
+              <div class="client-logo"><img src="images/logowool.jpeg" alt="" /></div>
+              <div class="client-logo"><img src="images/logozimbal.png" alt="" /></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <div class="contact-shell">
+
+          <!-- Left panel -->
+          <div class="contact-left fade-up fade-up-delay-2">
+            <canvas class="contact-sparks" aria-hidden="true"></canvas>
+            <div class="contact-left-inner">
+              <svg class="contact-glyph" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z" stroke="#e8823a" stroke-width="1"/>
+              </svg>
+
+              <h2>Contact Us</h2>
+              <p>Tell us about your site and we'll get back to you to talk through your fire and security requirements.</p>
+
+              <div class="contact-rows">
+                <div class="contact-row">
+                  <span class="contact-row-icon">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M3 11l9-7 9 7M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9" stroke="#1a0f07" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                  <div>
+                    Unit 4, Industrial Park, Durban<br>
+                    KwaZulu-Natal, South Africa
+                  </div>
+                </div>
+
+                <div class="contact-row">
+                  <span class="contact-row-icon">
+                    <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#1a0f07" stroke-width="1.8"/><path d="M3 7l9 6 9-6" stroke="#1a0f07" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                  <div>
+                    <a href="mailto:abdal@alftronfireandsecurity.co.za">abdal@alftronfireandsecurity.co.za</a><br>
+                    <a href="mailto:enquiries@alftronfireandsecurity.co.za">enquiries@alftronfireandsecurity.co.za</a>
+                  </div>
+                </div>
+
+                <div class="contact-row">
+                  <span class="contact-row-icon">
+                    <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="#1a0f07" stroke-width="1.8"/><path d="M12 8v4l3 2" stroke="#1a0f07" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                  <div>
+                    Phone: <a href="tel:0677225817">067 722 5817</a><br>
+                    Open 24 hours
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right panel: form -->
+          <div class="contact-right fade-up fade-up-delay-3">
+           <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+  <!-- Web3Forms: replace with your own access key from https://web3forms.com -->
+  <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+  <input type="hidden" name="subject" value="New enquiry from Alftron website">
+  <input type="hidden" name="from_name" value="Alftron Fire &amp; Security Website">
+  <!-- Honeypot: hidden from humans, catches bots -->
+  <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+
+  <div class="form-row">
+    <div class="form-field">
+      <label for="firstName">First Name</label>
+      <input type="text" id="firstName" name="firstName" placeholder="John" required>
+    </div>
+    <div class="form-field">
+      <label for="lastName">Last Name</label>
+      <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-field">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="johndoe@email.com" required>
+    </div>
+    <div class="form-field">
+      <label for="phone">Cell Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="067 722 5817" autocomplete="tel" required>
+    </div>
+  </div>
+
+  <div class="form-field">
+    <label for="service">Service Interest</label>
+    <select id="service" name="service" required>
+      <option value="" disabled selected>Select a Service</option>
+      <option>Fire Detection &amp; Alarm Systems</option>
+      <option>Fire Suppression Systems</option>
+      <option>Security &amp; Access Control</option>
+      <option>CCTV &amp; Surveillance</option>
+      <option>Monitoring &amp; Response</option>
+      <option>Inspection, Testing &amp; Maintenance</option>
+    </select>
+  </div>
+
+  <div class="form-field">
+    <label for="message">Message</label>
+    <textarea id="message" name="message" placeholder="Tell us about your site, timeline and requirements..." required></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary" id="contactSubmit">
+    <span class="btn-label">Send Message</span>
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7Z" stroke="#1a0f07" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+</form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer fade-up fade-up-delay-2">
+    <div>© 2026 Alftron Fire and Security. Your safety is our priority.</div>
+    <div>Designed for modern fire protection and security.</div>
+    <div>Created by <a href="https://dyme.digital">Dyme Digital</a></div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function(){
+      const canvas = document.querySelector('.contact-sparks');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      let width = 0, height = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const sparks = [];
+
+      function resize(){
+        const rect = canvas.parentElement.getBoundingClientRect();
+        width = rect.width;
+        height = rect.height;
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = width * dpr;
+        canvas.height = height * dpr;
+        canvas.style.width = width + 'px';
+        canvas.style.height = height + 'px';
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+      resize();
+      window.addEventListener('resize', resize);
+
+      function spawn(){
+        const originX = width * (0.05 + Math.random() * 0.25);
+        const originY = height * (0.7 + Math.random() * 0.3);
+        const angle = -Math.PI / 2 + (Math.random() - 0.5) * 1.1;
+        const speed = 0.3 + Math.random() * 1.2;
+
+        return {
+          x: originX,
+          y: originY,
+          vx: Math.cos(angle) * speed + (Math.random() - 0.5) * 0.3,
+          vy: Math.sin(angle) * speed - Math.random() * 0.4,
+          life: 0,
+          maxLife: 90 + Math.random() * 110,
+          size: 0.7 + Math.random() * 2,
+          hue: 18 + Math.random() * 28,
+        };
+      }
+
+      const count = reduce ? 0 : 26;
+      for (let i = 0; i < count; i++){
+        const s = spawn();
+        s.life = Math.random() * s.maxLife;
+        sparks.push(s);
+      }
+
+      function draw(){
+        ctx.clearRect(0, 0, width, height);
+        ctx.globalCompositeOperation = 'lighter';
+
+        for (let i = 0; i < sparks.length; i++){
+          const s = sparks[i];
+          s.life++;
+          s.x += s.vx;
+          s.y += s.vy;
+          s.vy -= 0.01;
+          s.vx *= 0.99;
+
+          const t = s.life / s.maxLife;
+          if (t >= 1 || s.y < height * 0.1){
+            sparks[i] = spawn();
+            continue;
+          }
+
+          const alpha = Math.sin(t * Math.PI) * 0.85;
+          const r = s.size * 3;
+          const grad = ctx.createRadialGradient(s.x, s.y, 0, s.x, s.y, r);
+          grad.addColorStop(0, `hsla(${s.hue}, 100%, 65%, ${alpha})`);
+          grad.addColorStop(0.4, `hsla(${s.hue}, 95%, 55%, ${alpha * 0.5})`);
+          grad.addColorStop(1, `hsla(${s.hue}, 90%, 45%, 0)`);
+          ctx.fillStyle = grad;
+          ctx.beginPath();
+          ctx.arc(s.x, s.y, r, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        ctx.globalCompositeOperation = 'source-over';
+        if (!reduce) requestAnimationFrame(draw);
+      }
+
+      draw();
+    })();
+  </script>
+</body>
+</html>
