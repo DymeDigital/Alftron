@@ -1655,7 +1655,7 @@ button, input, textarea {
   #process {
     background-image:
       linear-gradient(135deg, rgba(3, 3, 5, 0.14), rgba(8, 6, 6, 0.1)),
-      url('images/extinguisher.png');
+      url('images/extinguisher.webp');
     background-position: center center;
     background-size: cover;
   }
