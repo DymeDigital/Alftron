@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="preload" as="image" href="images/fire-alarm-systems-hero.webp" media="(min-width: 601px)" >
-<link rel="preload" as="image" href="images/mobilehero.webp" media="(max-width: 600px)">
+  <link rel="preload" as="image" href="images/fire-alarm-systems-hero.webp" media="(min-width: 601px)" fetchpriority="high">
+<link rel="preload" as="image" href="images/mobilehero.webp" media="(max-width: 600px)" fetchpriority="high">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alftron Fire and Security</title>
+  <meta name="description" content="Alftron Fire and Security: 25+ years designing, installing, inspecting and maintaining fire detection, suppression, hydrant and security systems for businesses across South Africa." />
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -408,8 +414,6 @@
         canvas.style.height = height + 'px';
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       }
-      resize();
-      window.addEventListener('resize', resize);
 
       function spawn(){
         const originX = width * (0.05 + Math.random() * 0.25);
@@ -427,13 +431,6 @@
           size: 0.7 + Math.random() * 2,
           hue: 18 + Math.random() * 28,
         };
-      }
-
-      const count = reduce ? 0 : 26;
-      for (let i = 0; i < count; i++){
-        const s = spawn();
-        s.life = Math.random() * s.maxLife;
-        sparks.push(s);
       }
 
       function draw(){
@@ -470,7 +467,36 @@
         if (!reduce) requestAnimationFrame(draw);
       }
 
-      draw();
+      // Only spin up the canvas (resize, seed particles, start the draw
+      // loop) once the contact section is actually about to be seen, so
+      // this decorative effect never competes with initial page load.
+      let started = false;
+      const start = () => {
+        if (started) return;
+        started = true;
+        resize();
+        window.addEventListener('resize', resize);
+        const count = reduce ? 0 : 26;
+        for (let i = 0; i < count; i++){
+          const s = spawn();
+          s.life = Math.random() * s.maxLife;
+          sparks.push(s);
+        }
+        draw();
+      };
+
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            start();
+            obs.disconnect();
+          });
+        }, { rootMargin: '200px 0px' });
+        io.observe(canvas);
+      } else {
+        start();
+      }
     })();
   </script>
 </body>

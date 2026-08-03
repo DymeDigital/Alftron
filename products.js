@@ -279,7 +279,11 @@ document.addEventListener('DOMContentLoaded', () => {
     </article>
   `;
 
-  grid.innerHTML = categories.map((c, i) => cardMarkup(c, i)).join('');
+  // Deferred a frame so this doesn't compete with the initial paint of the
+  // hero and other above-the-fold content
+  requestAnimationFrame(() => {
+    grid.innerHTML = categories.map((c, i) => cardMarkup(c, i)).join('');
+  });
 
   grid.addEventListener('click', (event) => {
     const head = event.target.closest('.service-item__head');

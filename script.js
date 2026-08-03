@@ -162,12 +162,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let activeCat = 'all';
 
-  // Build filter tabs
-  filterBar.innerHTML = categories.map(c => `
-    <button class="services-tab${c.id === 'all' ? ' is-active' : ''}"
-      type="button" role="tab" data-cat="${c.id}"
-      aria-selected="${c.id === 'all' ? 'true' : 'false'}">${c.label}</button>
-  `).join('');
+  // Build filter tabs (deferred a frame so this doesn't compete with the
+  // initial paint of the hero and other above-the-fold content)
+  requestAnimationFrame(() => {
+    filterBar.innerHTML = categories.map(c => `
+      <button class="services-tab${c.id === 'all' ? ' is-active' : ''}"
+        type="button" role="tab" data-cat="${c.id}"
+        aria-selected="${c.id === 'all' ? 'true' : 'false'}">${c.label}</button>
+    `).join('');
+  });
 
   const escapeHtml = (str) => str.replace(/[&<>"']/g, ch => (
     { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]
@@ -235,7 +238,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  render();
+  // Defer the initial (heaviest) grid build a frame for the same reason
+  requestAnimationFrame(render);
 
   // Filter clicks
   filterBar.addEventListener('click', (event) => {
