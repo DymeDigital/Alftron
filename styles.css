@@ -157,6 +157,10 @@ button, input, textarea {
   color: white;
 }
 
+.navbar__links a[aria-current="page"] {
+  color: white;
+}
+
 .navbar__cta {
   padding: 0.95rem 1.5rem;
   background: var(--accent);
@@ -450,9 +454,16 @@ button, input, textarea {
 }
 
 #process .section__heading,
-#process .process-grid {
+#process .process-grid,
+#process .process-cta {
   position: relative;
   z-index: 1;
+}
+
+.process-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
 }
 
 .service-grid {
@@ -600,6 +611,49 @@ button, input, textarea {
   font-size: 1.05rem;
   color: white;
   font-weight: 700;
+}
+
+.products-hero {
+  position: relative;
+  width: 100%;
+  padding: 8.5rem 24px 5rem;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(7, 7, 9, 0.55), rgba(7, 7, 9, 0.88)), url('images/valve-manifold.jpg') center/cover no-repeat;
+}
+
+.products-hero__inner {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.products-hero__inner h1 {
+  margin: 0.9rem 0;
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: white;
+}
+
+.products-hero__copy {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  max-width: 44rem;
+  margin: 0 auto;
+}
+
+.products-hero .hero__actions {
+  justify-content: center;
+  margin-top: 1.75rem;
+}
+
+.product-group + .product-group {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 .section--services {
@@ -867,6 +921,12 @@ button, input, textarea {
   font-size: 1.02rem;
 }
 
+.services-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
 @media (max-width: 860px) {
   .services-grid {
     grid-template-columns: 1fr;
@@ -876,6 +936,10 @@ button, input, textarea {
     text-align: center;
   }
   .services-cta .button {
+    width: 100%;
+  }
+  .services-cta__actions {
+    flex-direction: column;
     width: 100%;
   }
 }
@@ -1584,6 +1648,9 @@ button, input, textarea {
   #process,
   .section--services {
     padding: 48px 18px;
+  }
+  .products-hero {
+    padding: 7rem 20px 3.5rem;
   }
   #process {
     background-image:

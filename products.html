@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preload" as="image" href="images/valve-manifold.jpg">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products | Alftron Fire and Security</title>
+  <meta name="description" content="Browse Alftron's full range of fire safety products — extinguishers, hose reels, cabinets, signage, hydrant valves, hoses, blankets and first aid equipment." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="navbar" id="pageNavbar">
+    <a class="navbar__brand" href="index.html">
+      <img src="images/logo.webp" alt="Alftron Fire and Security logo" class="navbar__logo" fetchpriority="high"/>
+      <span class="navbar__brandText">Alftron Fire & Security</span>
+    </a>
+    <button class="navbar__toggle" aria-label="Open menu" id="menuToggle" aria-expanded="false">Menu</button>
+    <ul class="navbar__links" id="navMenu">
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="products.html" aria-current="page">Products</a></li>
+      <li><a href="index.html#process">Process</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li class="navbar__links-cta"><a href="index.html#contact">Request Service</a></li>
+    </ul>
+    <a class="navbar__cta" href="index.html#contact">Request Service</a>
+  </nav>
+
+  <main>
+    <section class="products-hero">
+      <div class="products-hero__inner">
+        <p class="eyebrow fade-up fade-up-delay-1">PRODUCT CATALOGUE</p>
+        <h1 class="fade-up fade-up-delay-2">Fire safety products, ready to supply and install.</h1>
+        <p class="products-hero__copy fade-up fade-up-delay-3">Extinguishers, hose reels, cabinets, signage, hydrant valves, hoses, blankets and first aid equipment — sourced, supplied and backed by our team.</p>
+        <div class="hero__actions fade-up fade-up-delay-4">
+          <a class="button button--primary" href="index.html#contact">Request a Quote</a>
+          <a class="button button--ghost" href="index.html#services">Our Services</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--services" id="products">
+      <div class="services-inner">
+        <div class="services-head">
+          <span class="eyebrow fade-up fade-up-delay-1">Products</span>
+          <h2 class="fade-up fade-up-delay-2">Everything you need to protect your site.</h2>
+          <p class="fade-up fade-up-delay-3">Select a category below to see everything available in it. Can't find what you're after? Get in touch and we'll source and supply it.</p>
+        </div>
+
+        <div class="services-grid" data-product-grid></div>
+
+        <div class="services-cta fade-up">
+          <p>Not sure which products your site needs? We'll assess it and recommend the right equipment.</p>
+          <a class="button button--primary" href="index.html#contact">Request a Quote</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer fade-up fade-up-delay-2">
+    <div>© 2026 Alftron Fire and Security. Your safety is our priority.</div>
+    <div>Designed for modern fire protection and security.</div>
+    <div>Created by <a href="https://dyme.digital">Dyme Digital</a></div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="products.js"></script>
+</body>
+</html>
