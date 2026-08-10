@@ -56,7 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const categories = [
     { id: 'all', label: 'All services' },
-    { id: 'fire', label: 'Detection & Suppression' },
+    { id: 'detection', label: 'Detection' },
+    { id: 'suppression', label: 'Suppression' },
     { id: 'water', label: 'Hydrants, Storage & Pumps' },
     { id: 'protect', label: 'Passive, Equipment & Signage' },
     { id: 'comply', label: 'Design, Compliance & Service' },
@@ -64,23 +65,23 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   const services = [
-    { cat: 'fire', name: 'Fire Detection Systems',
+    { cat: 'detection', name: 'Fire Detection Systems',
       desc: 'Early warning is the foundation of any fire strategy. We design and install conventional and addressable detection systems that identify smoke, heat or flame the moment it appears and raise the alarm before a fire can spread. From aspirating (VESDA) systems that sample the air in sensitive spaces to beam detectors covering large open areas, every system is engineered for reliable, false-alarm-resistant coverage and clear evacuation signalling.',
       includes: ['Conventional & Addressable Fire Alarm Systems', 'Aspirating Smoke Detection (VESDA)', 'Beam Smoke Detection', 'Smoke, Heat & Flame Detection', 'Manual Call Points & Alarm Devices'],
       applications: 'Commercial buildings, offices, warehouses, shopping centres, schools, hospitals, hotels, factories, data centres and industrial facilities.' },
-    { cat: 'fire', name: 'Fire Sprinkler Systems',
+    { cat: 'suppression', name: 'Fire Sprinkler Systems',
       desc: 'Sprinklers control or extinguish a fire automatically at its source, buying time for people to escape and limiting damage to property. We install wet, dry, pre-action and specialised high-challenge systems such as ESFR and in-rack sprinklers, each matched to the building\u2019s hazard level, occupancy and stored contents for dependable, code-compliant protection.',
       includes: ['Wet Pipe Systems', 'Dry Pipe Systems', 'Pre-Action Systems', 'ESFR Sprinkler Systems', 'In-Rack Sprinkler Systems'],
       applications: 'Warehouses, distribution centres, factories, shopping centres, offices, residential developments, hospitals and high-rise buildings.' },
-    { cat: 'fire', name: 'Gas Suppression Systems',
+    { cat: 'suppression', name: 'Gas Suppression Systems',
       desc: 'Where water would cause unacceptable damage, clean-agent gas suppression protects critical equipment and irreplaceable assets. Systems like FM-200, Novec 1230 and inert gas flood a protected space and extinguish fire in seconds without leaving residue or harming electronics. We also carry out room integrity testing to confirm the enclosure will hold the agent long enough to work.',
       includes: ['FM-200 Systems', 'Novec 1230 Systems', 'Inert Gas Systems', 'CO\u2082 Systems', 'Room Integrity Testing'],
       applications: 'Data centres, server rooms, control rooms, electrical switch rooms, substations, telecommunications facilities, museums, archives and critical infrastructure.' },
-    { cat: 'fire', name: 'Foam Fire Protection Systems',
+    { cat: 'suppression', name: 'Foam Fire Protection Systems',
       desc: 'Flammable liquids need more than water. Foam systems blanket a fuel surface to smother the fire and suppress dangerous vapours, preventing re-ignition. We design low-, medium- and high-expansion foam systems, monitors and proportioning equipment sized to the specific hazard and liquid being stored or handled.',
       includes: ['Low, Medium & High Expansion Foam Systems', 'Foam Monitors', 'Foam Proportioning Systems'],
       applications: 'Fuel depots, solvent plants, chemical plants, oil & gas facilities, aviation hangars, tank farms and hazardous liquid storage areas.' },
-    { cat: 'fire', name: 'Deluge Systems',
+    { cat: 'suppression', name: 'Deluge Systems',
       desc: 'For the highest-hazard areas, deluge systems release a large volume of water through open nozzles the instant a fire is detected, drenching the entire protected zone at once. They are ideal for cooling and protecting high-value equipment and areas where fire can spread with extreme speed.',
       includes: ['Deluge Valve Systems', 'Water Spray Systems', 'Open Nozzle Systems'],
       applications: 'Power stations, transformers, conveyor systems, petrochemical facilities, turbine rooms, fuel loading bays and other high-hazard industrial areas.' },

@@ -33,7 +33,7 @@ html {
 
 body {
   margin: 0;
-  background: radial-gradient(circle at top, rgba(255, 69, 69, 0.12), transparent 32%), #070709;
+  background: #070709;
   line-height: 1.6;
   -webkit-tap-highlight-color: transparent;
 }
@@ -130,13 +130,36 @@ button, input, textarea {
 
 .navbar__toggle {
   display: none;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  background: rgba(255, 255, 255, 0.06);
-  color: white;
-  padding: 0.85rem 1rem;
-  border-radius: 999px;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 18px;
+  height: 12px;
+  background: transparent;
+  border: none;
   cursor: pointer;
-  font-weight: 700;
+  padding: 0;
+  z-index: 70;
+}
+
+.navbar__toggle span {
+  display: block;
+  width: 18px;
+  height: 1.5px;
+  background-color: white;
+  border-radius: 1px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.navbar__toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(5.25px) rotate(45deg);
+}
+
+.navbar__toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar__toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-5.25px) rotate(-45deg);
 }
 
 .navbar__links {
@@ -179,7 +202,7 @@ button, input, textarea {
     padding: 16px 20px;
   }
   .navbar__toggle {
-    display: inline-flex;
+    display: flex;
   }
   .navbar__links {
     position: absolute;
@@ -427,6 +450,14 @@ button, input, textarea {
   margin: 0.75rem 0 0;
   font-size: clamp(2rem, 3vw, 2.8rem);
   color: white;
+}
+
+.section__heading p {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 700px;
 }
 
 #process {
@@ -1838,11 +1869,12 @@ button, input, textarea {
     display: none;
   }
   .navbar__toggle {
-    display: inline-flex;
-    align-items: center;
+    display: flex;
     order: 3;
     flex: none;
-    padding: 0.7rem 1.1rem;
+    padding: 0;
+    border: none;
+    background: transparent;
   }
   .navbar__links {
     display: flex;
