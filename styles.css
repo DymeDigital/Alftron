@@ -1984,6 +1984,7 @@ background: linear-gradient(180deg, rgba(7, 7, 9, 0.55), rgba(7, 7, 9, 0.88)), u
   justify-content: center;
   transition: all 0.2s ease;
   line-height: 1;
+  z-index: 10;
 }
 
 .lightbox__close:hover {
