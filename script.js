@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
       applications: 'Hospitals, hotels, office buildings, apartment blocks, factories, shopping centres and data centres.' },
     { cat: 'protect', name: 'Fire Equipment',
       desc: 'The right portable equipment, correctly placed and maintained, stops small fires becoming large ones. We supply and service extinguishers, fire blankets, hose reels and cabinets, matching each unit to the fire risk in that area and keeping everything within service date and ready for use.',
-      includes: ['Fire Extinguishers', 'Fire Blankets', 'Hose Reels', 'Fire Hydrants', 'Cabinets & Accessories'],
+      includes: ['Fire Extinguishers', 'Fire Blankets', 'Hose Reels', 'Fire Hydrants', 'Cabinets & Accessories', 'Custom Cabinets (on request)'],
       applications: 'Suitable for all commercial, industrial, residential, healthcare, hospitality and educational facilities.' },
     { cat: 'protect', name: 'Fire Safety Signage',
       desc: 'Clear signage guides people to safety when every second counts. We supply and install photoluminescent exit and equipment signs, directional markers and safety notices that stay visible in smoke or power failure and keep your premises compliant.',
@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <article class="service-item" data-cat="${s.cat}">
       <button class="service-item__head" type="button" aria-expanded="false" aria-controls="svc-panel-${i}" id="svc-head-${i}">
         <span class="service-item__tag">${escapeHtml(catLabel(s.cat))}</span>
-        <span class="service-item__name">${escapeHtml(s.name)}</span>
+        <h3 class="service-item__name">${escapeHtml(s.name)}</h3>
         <span class="service-item__chev" aria-hidden="true"></span>
       </button>
       <div class="service-item__panel" id="svc-panel-${i}" role="region" aria-labelledby="svc-head-${i}" hidden>

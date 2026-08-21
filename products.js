@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'cabinets',
       label: 'Cabinets',
-      tagline: 'Extinguisher, hose reel and marine cabinets in fibreglass, plastic, polyurethane and steel.',
+      tagline: 'Extinguisher, hose reel and marine cabinets in fibreglass, plastic, polyurethane and steel. Custom cabinets manufactured on request.',
       groups: [
         { title: 'Fiberglass Fire Extinguisher Cabinets', items: [
           '4.5 kg Fiberglass Fire Extinguisher Cabinet',
@@ -60,6 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
           'Marine Type 1 Plastic Cabinet (H: 52 cm | D: 21 cm | W: 67 cm)',
           'Marine Type 2 Plastic Cabinet (H: 52 cm | D: 27.5 cm | W: 67 cm)',
           'Marine Type 3 Plastic Cabinet (H: 52 cm | D: 34 cm | W: 67 cm)'
+        ]},
+        { title: 'Custom Cabinets', items: [
+          'Custom cabinets can be manufactured according to client requirements.'
         ]}
       ]
     },
@@ -267,7 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <article class="service-item" data-cat="${c.id}">
       <button class="service-item__head" type="button" aria-expanded="false" aria-controls="prod-panel-${i}" id="prod-head-${i}">
         <span class="service-item__tag">Product Category</span>
-        <span class="service-item__name">${escapeHtml(c.label)}</span>
+        <h3 class="service-item__name">${escapeHtml(c.label)}</h3>
         <span class="service-item__chev" aria-hidden="true"></span>
       </button>
       <div class="service-item__panel" id="prod-panel-${i}" role="region" aria-labelledby="prod-head-${i}" hidden>
